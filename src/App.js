@@ -1,12 +1,21 @@
-import React from "react";
-import ExamRegistrationForm from "./ExamRegistrationForm";
+// src/App.jsx
 
-function App() {
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Import your pages
+import ExamRegistrationForm from "./pages/ExamRegistrationForm";
+import AboutPage from "./pages/AboutPage";
+
+const App = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <ExamRegistrationForm />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ExamRegistrationForm />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
