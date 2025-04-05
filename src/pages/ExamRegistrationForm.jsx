@@ -27,7 +27,8 @@ const ExamRegistrationForm = () => {
     if (formData.name === "" || formData.phone === "" || formData.email === "" || formData.semester === "" || formData.admissionNumber === "" || formData.examRegisterNumber === "" )
       alert ("All Fields are Required !");
     else
-      alert("Form Submitted", formData);
+      alert("Form Submitted");
+    console.log(formData);
   };
 
   return (
